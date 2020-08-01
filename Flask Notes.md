@@ -110,19 +110,19 @@ We will need to configure this via the Azure Portal. https://portal.azure.com/
 
 After logging in, we want to click on the plus icon and "create a resource".
 
-![Azure Portal](./images/azure_portal.png)
+![Azure Portal](C:\Users\jerry\Documents\Projects\FlaskExample\Notes\images\azure_portal.png)
 
 
 
 Select "Web App". This will be the service we will use to deploy our application.
 
-![Create a new resource](./images/new_resource.PNG)
+![Create a new resource](.\images\new_resource.PNG)
 
 #### Resource Group
 
 For our new application, we will need to create a resource group. A **resource group** is a logical container into which Azure resources like web apps, databases, and storage accounts are deployed and managed. We should generally have our names be meaningful and easily distinguishable, but for our demo purposes we will name it flask_app.
 
-![](./images/new_web_app.PNG)
+![](.\images\new_web_app.PNG)
 
 ![](./images/web_app_config.png)
 
