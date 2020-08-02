@@ -2,34 +2,34 @@
 
 From the Azure portal, let's select create a new resource.
 
-![Azure Portal](./todo_images/create-new-service.PNG)
+![Azure Portal](./todo_images/create-new-service.png)
 
 Next we select Web App.
 
-![Create a new web app](./todo_images/web-app-option.PNG)
+![Create a new web app](./todo_images/web-app-option.png)
 
 
-![Create a new web app](./todo_images/web_app_plan.PNG)
+![Create a new web app](./todo_images/web_app_plan.png)
 
 For App Service Plan, if you don't currently have one, be sure to select the F1 tier which is free.
 
 Click on review + create. Your deployment should be underway
 
-![Create a new web app](./todo_images/web_app_plan.PNG)
+![Create a new web app](./todo_images/web_app_plan.png)
 
 ### Creating a Azure SQL Database Service
 
 Select SQL Database. 
 
-![Create a new database service](./todo_images/web-app-option.PNG)
+![Create a new database service](./todo_images/web-app-option.png)
 
 Select the same resource group you have made for the earlier web app service.
 
-![Create a new database service](./todo_images/web-app-option.PNG)
+![Create a new database service](./todo_images/web-app-option.png)
 
 
 
-![Create a new database service](./todo_images/create_new_db.PNG)
+![Create a new database service](./todo_images/create_new_db.png)
 
 For Project Details:
 
@@ -43,7 +43,7 @@ Database Name: flask_todo
 
 Server: Select "Create new"
 
-![Create a new database service](./todo_images/create_new_db_settings.PNG)
+![Create a new database service](./todo_images/create_new_db_settings.png)
 
 The server name will need to be a unique instance to identify your database.
 For Server Admin Login, put a username of your choice followed by a password. It is very important to remember these details as you will need them to access your database later on.
@@ -52,11 +52,11 @@ For Server Admin Login, put a username of your choice followed by a password. It
 
 For Computer + Storage, to minimise the costs of our student Azure account, we are going to select
 
-![Create a new database service](./todo_images/configure_compute.PNG)
+![Create a new database service](./todo_images/configure_compute.png)
 
 To reduce the costs, we will the select General Purpose database.
 
-![Create a new database service](./todo_images/database_configuration.PNG)
+![Create a new database service](./todo_images/database_configuration.png)
 
 Here, we are going with the bare minimum settings, 
 
@@ -64,7 +64,7 @@ Here, let's run the basic configuration for a database. This should be sufficien
 
 Then, hit "Next: Networking".
 
-![Create a new database service](./todo_images/db_networking.PNG)
+![Create a new database service](./todo_images/db_networking.png)
 
 Click next, and for the networking tab:
 
@@ -98,13 +98,13 @@ Once you have a GitHub account, make sure you have git installed on your compute
 
 After completing the steps above, we will need to create a new GitHub repo. [Explanation of github repo here]
 
-![Create a new database service](./todo_images/new_repo.PNG)
+![Create a new database service](./todo_images/new_repo.png)
 
 Make sure to select a git ignore file with python as the option.
 
 After we have created a brand new repository, we will need to get our github url.
 
-![Create a new database service](./todo_images/get_github_url.PNG)
+![Create a new database service](./todo_images/get_github_url.png)
 
 Let's copy this url the navigate to our terminal in VS Code with our Flask project.
 
@@ -221,7 +221,7 @@ Afterwards, we will need to start up our server again to test if everything is f
 127.0.0.1 - - [02/Aug/2020 16:29:21] "GET / HTTP/1.1" 200 -
 ```
 
-![Connected to Azure SQL](./todo_images/db_result.PNG)
+![Connected to Azure SQL](./todo_images/db_result.png)
 
 Now let's run the following command in terminal
 
@@ -259,21 +259,21 @@ Let's head back to the portal.
 
 Navigate to our newly created Web App Service. The one for this guide was called flasktodomd.
 
-![Azure Port Page for Web App Services](./todo_images/flasktodomd_properties.PNG)
+![Azure Port Page for Web App Services](./todo_images/flasktodomd_properties.png)
 
 On the left, there are a number of options. Navigate to Deployment Center
 
-![Azure Port Page for Web App Services](./todo_images/deployment_center.PNG)
+![Azure Port Page for Web App Services](./todo_images/deployment_center.png)
 
 Select GitHub, connect with your account if you have not done so before.
 
 Here we will pick App Service Build Service.
 
-![Azure Port Page for Web App Services](./todo_images/deployment_center_2.PNG)
+![Azure Port Page for Web App Services](./todo_images/deployment_center_2.png)
 
 Find the repo that we have recently created. For this guide, we used flaskmd, if you have named it something else than choose that.
 
-![Azure Port Page for Web App Services](./todo_images/deployment_center_3.PNG)
+![Azure Port Page for Web App Services](./todo_images/deployment_center_3.png)
 
 After that, click finish. 
 
