@@ -1,18 +1,22 @@
 # Flask Tutorial
 
-### Learning Outcomes
+## Learning Outcomes
+* Use HTML and Bootstrap to create a website
+* Use Flask to serve static and dynamic content to users
+* Manage data with Databases with SQLAlchemy and link that to Azure SQL Database services on Azure
+* Use Platform as a Service to host your own Flask Web Application on Azure
 
-### Pre-requisites
+## Pre-requisites
 
-#### Python 3
+### Python 3
 
 https://www.python.org/downloads/
 
-#### Visual Studio Code
+### Visual Studio Code
 
 https://code.visualstudio.com/download
 
-### Making a Directory
+## Making a Directory
 
 First of all, let's open up visual studio code, our code editor or an editor of your choice.
 
@@ -20,11 +24,14 @@ We will need to make a new folder, in order to manage our new Flask project.
 
 For the purposes of this demo, we will name the folder `todo_flask`, now let's navigate inside it for the next step.
 
-### Setting up a Virtual Environment
+## Setting up a Virtual Environment
 
 What is a virtual environment?
+A virtual environment, is an isolated environment or work place you can set up for your python projects. In this environment, you can install different python modules and dependencies and not have to worry about it affecting any other modules or dependencies on the outside.
 
-#### Linux / Ubuntu
+For more information: https://realpython.com/python-virtual-environments-a-primer/
+
+### Linux / Ubuntu
 
 Sometimes in a Ubuntu Linux system, the standard venv package is not installed by default. To add it to your system, install the python3-venv package as follows: 
 
@@ -38,7 +45,7 @@ To activate
 
 `source venv/bin/activate`
 
-#### Windows
+### Windows
 
 The command that creates a virtual environment has the following structure: 
 
@@ -52,11 +59,11 @@ If you're no longer using the virtual environmental or want to use another virtu
 
 ```deactivate```
 
-#### Flask
+## Flask
 
 What is Flask?
 
-##### Installing Flask
+### Installing Flask
 
 ```
 (env) $ pip install flask
@@ -72,7 +79,7 @@ MarkupSafe==1.1.1
 Werkzeug==1.0.1
 ```
 
-#### Project Structure
+### Project Structure
 
 Inside the `todo-flask` directory, we will create three files:
 
@@ -113,7 +120,7 @@ def index():
 
 Congratulations! You've successfully created your first web application! How easy was that?! 😊
 
-#### Running the Flask Website
+### Running the Flask Website
 
 Now let's see our website in action.
 
@@ -131,7 +138,7 @@ Now let's see our website in action.
 
 Now go to http://127.0.0.1:5000/ with any web browser and it should be up.
 
-#### Routes
+### Routes
 
 Let's talk a bit about routing.
 
@@ -153,7 +160,7 @@ def route_view():
 
 So if your website may have many pages, Flask gives you the functionality to serve different web pages or content.
 
-##### Enable Debug / Development Mode
+#### Enable Debug / Development Mode
 
 When we are updating and developing the website, we want any changes we apply to be reflected 
 
@@ -177,7 +184,7 @@ For PowerShell, use `$env`:
 $env:FLASK_ENV = "development"
 ```
 
-#### Templating - Serving HTML Web Pages 
+### Templating - Serving HTML Web Pages 
 
 Now we're well on our way to designing and developing a fully fledged website. 
 
@@ -320,7 +327,7 @@ Let's try accessing our website again!
 You may have noticed, the content that we are serving to our users is static and the data won't change.
 The buttons don't seem to work either. In the next few sections we will make sure to tackle these areas.
 
-##### Dynamic Rendering and Passing Data
+#### Dynamic Rendering and Passing Data
 
 Often in websites, we want the content of a website to reflect the state or data being stored in it. So if we finish a task such as eating, we want it to only display the tasks remaining. 
 
@@ -413,3 +420,9 @@ Now that we've made the changes, let's go back to http://127.0.0.1:5000/ and see
 ![Passing down the data](./todo_images/pass_data.png)
 
 Success!
+
+For more information on Jinja2 and Templating:
+ * https://flask.palletsprojects.com/en/1.1.x/tutorial/templates/
+ * https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ii-templates
+ * https://realpython.com/primer-on-jinja-templating/
+ 
