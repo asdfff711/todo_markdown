@@ -127,7 +127,7 @@ The next step is to give ourselves the ability to add tasks. We can do this on t
 
 This is what we will end with:
 
-![Add tasks using modals](C:/Users/jerry/Documents/Projects/FlaskExample/Notes/todo_images/modal.png)
+![Add tasks using modals](./todo_images/modal.png)
 
 For this to work, we need to add some code to both the HTML file, `index.html` and our `routes.py` file
 

@@ -52,7 +52,7 @@ Often for delete buttons, there is a confirmation window to make sure the user w
 
 This is what it will look like:
 
-![Delete confirmation modal](C:/Users/jerry/Documents/Projects/FlaskExample/Notes/todo_images/are_you_sure.png)
+![Delete confirmation modal](./todo_images/are_you_sure.png)
 
 We will append this after the first modal `<div>` or above the first `<script>` tag.
 

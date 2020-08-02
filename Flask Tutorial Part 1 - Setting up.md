@@ -315,7 +315,7 @@ def index():
 
 Let's try accessing our website again!
 
-![Our new website](C:/Users/jerry/Documents/Projects/FlaskExample/Notes/todo_images/static_html.png)
+![Our new website](./todo_images/static_html.png)
 
 You may have noticed, the content that we are serving to our users is static and the data won't change.
 The buttons don't seem to work either. In the next few sections we will make sure to tackle these areas.
@@ -410,6 +410,6 @@ Fr every task in the list, we will produce a row in HTML to display it. We can a
 
 Now that we've made the changes, let's go back to http://127.0.0.1:5000/ and see our changes
 
-![Passing down the data](C:/Users/jerry/Documents/Projects/FlaskExample/Notes/todo_images/pass_data.png)
+![Passing down the data](./todo_images/pass_data.png)
 
 Success!
