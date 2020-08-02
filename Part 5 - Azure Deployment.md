@@ -2,7 +2,7 @@
 
 From the Azure portal, let's select create a new resource.
 
-![Azure Portal](./todo_images/create-new-service.PNG)
+![Azure Portal](./todo_images/create-new-service.png) 
 
 Next we select Web App.
 
@@ -43,7 +43,7 @@ Database Name: flask_todo
 
 Server: Select "Create new"
 
-![Create a new database service](./todo_images/create_new_db_settings.PNG)
+![Create a new database service](./todo_images/create_new_db_settings.png)
 
 The server name will need to be a unique instance to identify your database.
 For Server Admin Login, put a username of your choice followed by a password. It is very important to remember these details as you will need them to access your database later on.
@@ -98,7 +98,7 @@ Once you have a GitHub account, make sure you have git installed on your compute
 
 After completing the steps above, we will need to create a new GitHub repo. [Explanation of github repo here]
 
-![Create a new database service](./todo_images/new_repo.PNG)
+![Create a new database service](./todo_images/new_repo.png)
 
 Make sure to select a git ignore file with python as the option.
 
@@ -259,21 +259,21 @@ Let's head back to the portal.
 
 Navigate to our newly created Web App Service. The one for this guide was called flasktodomd.
 
-![Azure Port Page for Web App Services](./todo_images/flasktodomd_properties.PNG)
+![Azure Port Page for Web App Services](./todo_images/flasktodomd_properties.png)
 
 On the left, there are a number of options. Navigate to Deployment Center
 
-![Azure Port Page for Web App Services](./todo_images/deployment_center.PNG)
+![Azure Port Page for Web App Services](./todo_images/deployment_center.png)
 
 Select GitHub, connect with your account if you have not done so before.
 
 Here we will pick App Service Build Service.
 
-![Azure Port Page for Web App Services](./todo_images/deployment_center_2.PNG)
+![Azure Port Page for Web App Services](./todo_images/deployment_center_2.png)
 
 Find the repo that we have recently created. For this guide, we used flaskmd, if you have named it something else than choose that.
 
-![Azure Port Page for Web App Services](./todo_images/deployment_center_3.PNG)
+![Azure Port Page for Web App Services](./todo_images/deployment_center_3.png)
 
 After that, click finish. 
 
