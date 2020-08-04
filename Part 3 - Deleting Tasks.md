@@ -141,7 +141,7 @@ Below the three JavaScript `<script>` tags, we will add the following:
     deleteId = event.dataset.itemId;
   }
   function deleteTask(id) {
-    fetch("/item/" + id, {
+    fetch("/task/" + id, {
       method: "DELETE",
     })
       .then(() => window.location.reload())

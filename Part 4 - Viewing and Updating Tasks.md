@@ -31,8 +31,7 @@ First let's create a new file `view_task.html` in the `/templates` folder.
             </div>
             <div class="form-group">
                 <label for="taskDescription">Task Description</label>
-                <textarea name="taskDescription" class="form-control" id="taskDescription" rows="4">	                        {{taskDescription}}
-                </textarea>
+                <textarea name="taskDescription" class="form-control" id="taskDescription" rows="4">{{taskDescription}}</textarea>
               </div>
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
