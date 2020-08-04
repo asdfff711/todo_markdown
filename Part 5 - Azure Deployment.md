@@ -1,3 +1,12 @@
+# Flask Part 5 -  Managing Data with Databases
+
+## Learning Outcomes
+
+* Learn to create resources in Azure Portal
+* Use continuous deployment with GitHub and Azure Deployment Center
+* Deploy and manage a Flask Application and Azure SQL Service
+* Use application settings / environment variables to manage connection strings
+
 ## Setting Up Services
 
 From the Azure portal, let's select create a new resource.

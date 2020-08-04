@@ -1,12 +1,42 @@
-#### SQLAlchemy - Adding a Database
+# Flask Part 2 -  Managing Data with Databases
 
-Even though, we can pass down data to our render_template(). We don't have a way to manage and store our data. 
+## Learning Outcomes
 
-How would we handle and persist the data? 
+* Install and configure Flask-SQLAlchemy
+* Create Database Modal for Task and use it to manage data in a web application
+* Pass dynamic content to end users using Jinja2 and HTML/CSS/Bootstrap
+* Learn to use Forms and Modals in HTML/Bootstrap
 
-Generally websites have some form of database running, this allows them to store and manage all types of data. 
+## SQLAlchemy
 
-To make our lives a bit easier, we are going to use a module for flask called `flask-sqlalchemy`.
+In many applications, data is managed in relational databases. To use them we generally have to:
+
+* Set them up, create tables to represent our data, 
+* Create different types of relationships with things such as Primary Key/Foreign keys
+* Write SQL queries and then potentially write code to process the results
+
+With ORM, Object Relational Mappers, much of this hard work is done for us in most instances. 
+We define models, its properties and behind the scenes, the ORM manages many of these details for us. We are given an interface to interact with the models and can extend in many ways, making the lives of those who use these tools much easier. In this tutorial, we will not focus on ORM / SQL Alchemy in-depth as this is a Flask tutorial.
+
+For an introduction to ORMs: 
+https://blog.bitsrc.io/what-is-an-orm-and-why-you-should-use-it-b2b6f75f5e2a
+
+For more in-depth:
+
+https://en.wikipedia.org/wiki/Object-relational_mapping
+
+Flask-SQLAlchemy Documentation:
+
+https://flask-sqlalchemy.palletsprojects.com/en/2.x/quickstart/
+https://www.sqlalchemy.org/
+
+## SQLAlchemy - Adding a Database
+
+Even though, we can pass down data to our `render_template()`. We don't have a way to manage and store our data. 
+
+Generally websites have some form of database running, this allows them to store and manage all types of data. Here we are going to use SQLite, a relatively simple database that will meet our needs.
+
+We are going to use a module for flask called `flask-sqlalchemy` to manage this database.
 
 Update the `__init__.py` in the `app/` folder:
 
@@ -19,20 +49,21 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
+# Get the directory path of our file
 basedir = os.path.abspath(os.path.dirname(__file__))
 
+# Create a path to our sqlite file based on the directory path above
 app.config['SQLALCHEMY_DATABASE_URI'] =\
     'sqlite:///' + os.path.join(basedir, 'data.sqlite')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
+# Wrap our Flask-Alchemy instance around our Flask Application
 db = SQLAlchemy(app)
 
 from app import routes
 ```
 
-This configures SQLAlchemy. (Some information about SQL Alchemy and ORMs here)
-
-#### Install Flask-SQLAlchemy
+This configures SQLAlchemy. 
 
 ```
 (venv) PS ...\todo-flask> pip install flask-sqlalchemy
@@ -46,7 +77,7 @@ Installing collected packages: SQLAlchemy, flask-sqlalchemy
 Successfully installed SQLAlchemy-1.3.18 flask-sqlalchemy-2.4.4
 ```
 
-#### Defining Models
+### Defining Models
 
 Let's create a new folder inside `app/` folder, and call it Models. Inside this models we will create a `models.py` file
 
@@ -79,7 +110,7 @@ class Task(db.Model):
         return '<Task %r - %r>' % self.name, self.description
 ```
 
-What we've done here is defined the model. (Explanation of what are models)
+What we've done here is defined the model.  A model is simply a representation of what our data would look like in the database. SQLAlchemy makes this really easy to do.
 
 After we've defined the models we are using in our database, its time to build the tables and add some starting data.
 
@@ -121,7 +152,7 @@ def index():
     return render_template("index.html", title=title, tasks=tasks)
 ```
 
-#### Adding Tasks
+### Adding Tasks
 
 The next step is to give ourselves the ability to add tasks. We can do this on the frontend side with HTML and Bootstrap. Usually when users send data or information, a common way that is being used in HTML is forms. They encapsulate information in a request in order to deliver it to the backend, which is our Flask server. 
 
@@ -148,10 +179,14 @@ def index():
 # POST (Forms)
 @app.route('/item/', methods=['POST'])
 def add_item():
-    # Get form data from
+    # Get data from form fields itemName and itemDescription
     taskName = request.form.get('itemName')
     taskDescription = request.form.get('itemDescription')
+    
+    # Put data into a new Task item
     new_item = Task(name=taskName, description=taskDescription)
+    
+    # Add and commit the changes to the database
     db.session.add(new_item)
     db.session.commit()
     return redirect(url_for('index'))
@@ -165,11 +200,7 @@ For more information:
 
 https://www.w3schools.com/html/html_forms.asp
 
-More links
-
-(Explanation of add_item()  here)
-
-###### Modifying index.html
+#### Modifying index.html
 
 We will take a two step process for this. 
 

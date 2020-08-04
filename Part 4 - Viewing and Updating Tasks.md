@@ -1,3 +1,11 @@
+# Flask Part 4 -  Viewing and Updating the Data
+
+## Learning Outcomes
+
+* Use SQLAlchemy to manage and query individual items as well as update them 
+* Learn to refactor Jinja2 template files to reduce redundency
+* Handle multiple HTTP-Methods in the same route
+
 ### Viewing Individual Tasks and Updating Them
 
 An important aspect of managing data, is viewing additional details and updating them. 
@@ -63,23 +71,23 @@ Let's move the modals into a separate file and call it `modals.html`, and delete
         </button>
       </div>
       <div class="modal-body">
-        <form action="/item/" method="post">
+        <form action="/task/" method="post">
           <div class="form-group">
             <label for="itemName">Task Name</label>
             <input
-              name="itemName"
+              name="taskName"
               type="text"
               class="form-control"
-              id="itemName"
+              id="taskName"
               placeholder="Item Name"
             />
           </div>
           <div class="form-group">
             <label for="itemDescription">Task Description</label>
             <textarea
-              name="itemDescription"
+              name="taskDescription"
               class="form-control"
-              id="itemDescription"
+              id="taskDescription"
               rows="3"
             ></textarea>
           </div>

@@ -1,6 +1,9 @@
-# Flask Tutorial
+# Flask Part 1 - Setup, Venv, Routes and Templates
 
-## Learning Outcomes
+## Setting Up
+
+### Learning Outcomes
+
 * Use HTML and Bootstrap to create a website
 * Use Flask to serve static and dynamic content to users
 * Manage data with Databases with SQLAlchemy and link that to Azure SQL Database services on Azure
@@ -29,11 +32,15 @@ For the purposes of this demo, we will name the folder `todo_flask`, now let's n
 What is a virtual environment?
 A virtual environment, is an isolated environment or work place you can set up for your python projects. In this environment, you can install different python modules and dependencies and not have to worry about it affecting any other modules or dependencies on the outside.
 
+We will need to run the commands seen below in a terminal in the directory we intend to have our project.
+
 For more information: https://realpython.com/python-virtual-environments-a-primer/
 
 ### Linux / Ubuntu
 
-Sometimes in a Ubuntu Linux system, the standard venv package is not installed by default. To add it to your system, install the python3-venv package as follows: 
+Sometimes in a Ubuntu Linux system, the standard venv package is not installed by default. 
+
+To add it to your system, install the python3-venv package as follows: 
 
 `$ sudo apt-get install python3-venv`
 
@@ -59,9 +66,17 @@ If you're no longer using the virtual environmental or want to use another virtu
 
 ```deactivate```
 
-## Flask
+### What does `python3 -m venv venv` do?  
 
-What is Flask?
+Python with the flag `-m` allows you to run a module as if it was a python script itself, the `venv` when run like this, allows us to create a virtual environment.  
+
+`python3 -m <module-name> <any arguments>`
+
+So here, we are running the venv module and giving it an argument of `venv` which is short for virtual environment. This just tells the `venv` module to create a virtual environment inside our current directory in the terminal and store its details and metadata in the folder name `/venv`.
+
+## What is Flask?
+
+Flask is a micro-framework of python which is used in web development. It can be used as a backend framework used to develop websites. It's lightweight and compact nature, makes it easy to learn and use. It's also very flexible, you are able to install modules to extend the functionality of your site based on your needs without 
 
 ### Installing Flask
 
@@ -425,4 +440,3 @@ For more information on Jinja2 and Templating:
  * https://flask.palletsprojects.com/en/1.1.x/tutorial/templates/
  * https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ii-templates
  * https://realpython.com/primer-on-jinja-templating/
- 

@@ -1,17 +1,19 @@
 
 
-### Deleting Tasks
+# Flask Part 2 -  Managing Data with Databases
 
-You've made it all the way here though to this section. Great work!
-You'll now learn another important part of managing data which is deleting items. 
-
-We will look at how we can: 
+## Learning Outcomes
 
 * Create requests on our webpages to delete tasks using the Fetch
 * Create and use a JavaScript function to complete the DELETE request
 * How to handle DELETE methods in Flask
 
-#### Update the Delete Button
+### Deleting Tasks
+
+You've made it all the way here though to this section. Great work!
+You'll now learn another important part of managing data which is deleting items. 
+
+### Update the Delete Button
 
 First of all, let's modify the delete button in `index.html` to support the deletion of a task.
 
@@ -46,9 +48,9 @@ For more information on data attributes:
 
 https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes
 
-#### Creating the Delete Task Modal
+### Creating the Delete Task Modal
 
-Often for delete buttons, there is a confirmation window to make sure the user wanted to delete. Ocassionally, we misclick and delete something we don't intend to. So let us create a confirmation pop up window to prevent this from happening. 
+Often for delete buttons, there is a confirmation window to make sure the user wanted to delete. Ocassionally, we may misclick and delete something we don't intend to. So let us create a confirmation pop up window to prevent this from happening. 
 
 This is what it will look like:
 
@@ -139,7 +141,6 @@ Below the three JavaScript `<script>` tags, we will add the following:
     deleteId = event.dataset.itemId;
   }
   function deleteTask(id) {
-    console.log(deleteId);
     fetch("/item/" + id, {
       method: "DELETE",
     })
@@ -179,7 +180,7 @@ def delete_task(id):
         msg = {
             'message': 'Delete successful'
         }
-        db.session.delete(item)
+        db.session.delete(task)
         db.session.commit()
         return jsonify(msg), 200
 	
