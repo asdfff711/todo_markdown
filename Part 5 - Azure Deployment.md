@@ -38,7 +38,7 @@ Select the same resource group you have made for the earlier web app service.
 
 
 
-![Create a new database service](./todo_images/create_new_db.png)
+![Create a new database service](./todo_images/create_new_db.PNG)
 
 For Project Details:
 
