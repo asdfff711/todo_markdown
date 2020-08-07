@@ -123,6 +123,9 @@ git init
 
 git remote add origin <YOUR GITHUB REPO URL>
 
+# Set current branch to be master
+git checkout master
+
 # Add all current working files to the repository
 git add .
 

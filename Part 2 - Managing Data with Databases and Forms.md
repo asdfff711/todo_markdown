@@ -177,11 +177,11 @@ def index():
     return render_template("index.html", title=title, tasks=tasks)
 
 # POST (Forms)
-@app.route('/item/', methods=['POST'])
+@app.route('/task/', methods=['POST'])
 def add_item():
-    # Get data from form fields itemName and itemDescription
-    taskName = request.form.get('itemName')
-    taskDescription = request.form.get('itemDescription')
+    # Get data from form fields taskName and taskDescription
+    taskName = request.form.get('taskName')
+    taskDescription = request.form.get('taskDescription')
     
     # Put data into a new Task item
     new_item = Task(name=taskName, description=taskDescription)
@@ -263,23 +263,23 @@ This is Bootstrap's way of representing modals in an accessible way to tools suc
         </button>
       </div>
       <div class="modal-body">
-        <form action="/item/" method="post">
+        <form action="/task/" method="post">
           <div class="form-group">
-            <label for="itemName">Task Name</label>
+            <label for="taskName">Task Name</label>
             <input
-              name="itemName"
+              name="taskName"
               type="text"
               class="form-control"
-              id="itemName"
-              placeholder="Item Name"
+              id="taskName"
+              placeholder="Task Name"
             />
           </div>
           <div class="form-group">
-            <label for="itemDescription">Task Description</label>
+            <label for="taskDescription">Task Description</label>
             <textarea
-              name="itemDescription"
+              name="taskDescription"
               class="form-control"
-              id="itemDescription"
+              id="taskDescription"
               rows="3"
             ></textarea>
           </div>
@@ -294,23 +294,23 @@ This is Bootstrap's way of representing modals in an accessible way to tools suc
 The part we are interested in is the following:
 
 ```html
-<form action="/item/" method="post">
+<form action="/task/" method="post">
   <div class="form-group">
-    <label for="itemName">Task Name</label>
+    <label for="taskName">Task Name</label>
     <input
-      name="itemName"
+      name="taskName"
       type="text"
       class="form-control"
-      id="itemName"
+      id="taskName"
       placeholder="Item Name"
     />
   </div>
   <div class="form-group">
-    <label for="itemDescription">Task Description</label>
+    <label for="taskDescription">Task Description</label>
     <textarea
-      name="itemDescription"
+      name="taskDescription"
       class="form-control"
-      id="itemDescription"
+      id="taskDescription"
       rows="3"
     ></textarea>
   </div>
@@ -321,13 +321,13 @@ The part we are interested in is the following:
 Here, we are wrapping a `<form>` around three form elements. Specifically, a text input form element, a text area form element for longer paragraphs and a submit button.
 
 ```html
-<form action="/item/" method="post">
-    <input name="itemName" type="text"></input>
-	<textarea name="itemDescription" id="itemDescription"></textarea>
+<form action="/task/" method="post">
+    <input name="taskName" type="text"></input>
+	<textarea name="taskDescription" id="itemDescription"></textarea>
 	<button type="submit" class="btn btn-primary"></button>
 </form>
 ```
 
-When the button is pressed, the form is submitted and sent to http://www.ourwebsite.com/item. As a POST request, a post request is a special request that allows us to attach data to the server. For more information refer to the REST API section of our MSA workshop notes.
+When the button is pressed, the form is submitted and sent to http://www.ourwebsite.com/task. As a POST request, a post request is a special request that allows us to attach data to the server. For more information refer to the REST API section of our MSA workshop notes.
 
 Congratulations! We can now add items.

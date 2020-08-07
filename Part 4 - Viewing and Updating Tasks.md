@@ -40,10 +40,6 @@ First let's create a new file `view_task.html` in the `/templates` folder.
 {% endblock %}
 ```
 
-[IMAGE SHOWING THE PROCESS of TEMPLATING todo]
-
-[IMAGE OF SEPARATE PAGE todo]
-
 Let's move the modals into a separate file and call it `modals.html`, and delete it from index.html
 
 ```html

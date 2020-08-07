@@ -177,7 +177,7 @@ So if your website may have many pages, Flask gives you the functionality to ser
 
 #### Enable Debug / Development Mode
 
-When we are updating and developing the website, we want any changes we apply to be reflected 
+When we are updating and developing the website, we want any changes we apply to be reflected immediately.
 
 For Linux, Mac, Linux Subsystem for Windows, Git Bash on Windows, etc.:
 
@@ -323,7 +323,7 @@ Let's add create a new file `static.html`
 </html>
 ```
 
-We will need to update `app.py`
+We will need to update `route.py`
 
 ```python
 from flask import render_template
