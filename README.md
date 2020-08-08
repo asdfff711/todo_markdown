@@ -17,13 +17,13 @@
 * [Part 4 - Viewing and Updating Tasks](https://github.com/JerryyZhu/todo_markdown/blob/master/Part%204%20-%20Viewing%20and%20Updating%20Tasks.md)
 * [Part 5 - Azure Deployment](https://github.com/JerryyZhu/todo_markdown/blob/master/Part%205%20-%20Azure%20Deployment.md)
 
-Other Links:
+### Other Links:
 
 [MSA 2020 Official GitHub](https://github.com/AUMSA/2020-MSA-content)
 
 [MSA 2020 Web App & Apis](https://github.com/AUMSA/2020-MSA-content/tree/master/Workshops/Git%20%26%20GitHub)
 
-More resources:
+### More resources:
 
 [Mega Flask Tutorial - Miguel Grinberg](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world)
 
