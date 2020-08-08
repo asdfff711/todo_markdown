@@ -29,14 +29,13 @@ For the purposes of this demo, we will name the folder `todo_flask`, now let's n
 
 ## Setting up a Virtual Environment
 
-What is a virtual environment?
 A virtual environment, is an isolated environment or work place you can set up for your python projects. In this environment, you can install different python modules and dependencies and not have to worry about it affecting any other modules or dependencies on the outside.
 
 We will need to run the commands seen below in a terminal in the directory we intend to have our project.
 
 For more information: https://realpython.com/python-virtual-environments-a-primer/
 
-### Linux / Ubuntu
+### Mac / Linux 
 
 Sometimes in a Ubuntu Linux system, the standard venv package is not installed by default. 
 
@@ -435,6 +434,8 @@ Now that we've made the changes, let's go back to http://127.0.0.1:5000/ and see
 ![Passing down the data](./todo_images/pass_data.png)
 
 Success!
+
+[Part 2 - Managing Data with Databases](https://github.com/JerryyZhu/todo_markdown/blob/master/Part%202%20-%20Managing%20Data%20with%20Databases%20and%20Forms.md)
 
 For more information on Jinja2 and Templating:
  * https://flask.palletsprojects.com/en/1.1.x/tutorial/templates/

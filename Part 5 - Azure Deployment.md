@@ -123,6 +123,8 @@ git init
 
 git remote add origin <YOUR GITHUB REPO URL>
 
+git pull
+
 # Set current branch to be master
 git checkout master
 

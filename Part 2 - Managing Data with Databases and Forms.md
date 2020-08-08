@@ -79,14 +79,13 @@ Successfully installed SQLAlchemy-1.3.18 flask-sqlalchemy-2.4.4
 
 ### Defining Models
 
-Let's create a new folder inside `app/` folder, and call it Models. Inside this models we will create a `models.py` file
+Let's create a new models `models.py` file in our app folder.
 
 ```
 todo-flask/
   venv/
   app/
-    models/
-      models.py
+    models.py
     templates/
       index.html
     __init__.py
@@ -192,7 +191,7 @@ def add_item():
     return redirect(url_for('index'))
 ```
 
-Notice how we have`@app.route('/item/', methods=['POST'])`. 
+Notice how we have`@app.route('/task/', methods=['POST'])`. 
 
 This will be a different endpoint to handle receiving data from the user where the user *POSTS* the data back to our server.  This is done through 
 
@@ -331,3 +330,6 @@ Here, we are wrapping a `<form>` around three form elements. Specifically, a tex
 When the button is pressed, the form is submitted and sent to http://www.ourwebsite.com/task. As a POST request, a post request is a special request that allows us to attach data to the server. For more information refer to the REST API section of our MSA workshop notes.
 
 Congratulations! We can now add items.
+
+[Part 3 - Fetch, Requests and Deleting Data](https://github.com/JerryyZhu/todo_markdown/blob/master/Part%203%20-%20Deleting%20Tasks.md)
+

@@ -277,3 +277,4 @@ Congratulations, you have developed a complete web application that can manage d
 
 Our next step is to move this to deploy this application to the cloud.
 
+[Part 5 - Azure Deployment](https://github.com/JerryyZhu/todo_markdown/blob/master/Part%205%20-%20Azure%20Deployment.md)
