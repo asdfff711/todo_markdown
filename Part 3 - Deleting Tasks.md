@@ -191,6 +191,12 @@ def delete_task(id):
     return jsonify(msg), 204
 ```
 
+Note that since we will need to import `jsonify` from flask. So let's update our import statements
+
+```python
+from flask import render_template, request, redirect, url_for, jsonify
+```
+
 The function `delete_task(id)` takes in a parameter from the url, and finds the task from the database. If the id we receive is valid and the task exists in the database, that is given to us in ` task = Task.query.filter_by(id=id).first()`, we will delete it and commit in the database.
 
 [Part 4 - Viewing and Updating Tasks](https://github.com/JerryyZhu/todo_markdown/blob/master/Part%204%20-%20Viewing%20and%20Updating%20Tasks.md)

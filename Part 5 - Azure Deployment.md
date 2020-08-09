@@ -217,7 +217,7 @@ from app import routes
 
 #### Configure the database table on SQL Server
 
-Since this is a brand new database, we will need to run our setup_db.py again
+Since this is a brand new database, we will need to run our setup_db.py again. We do this to create and define the table `tasks` where our data will be stored.
 
 ```bash
 python setup_db.py
@@ -271,11 +271,27 @@ git push
 
 Let's head back to the portal. 
 
-Navigate to our newly created Web App Service. The one for this guide was called flasktodomd.
+Navigate to our newly created Web App Service. The one for this guide was called `flasktodomd`.
 
 ![Azure Port Page for Web App Services](./todo_images/flasktodomd_properties.png)
 
-On the left, there are a number of options. Navigate to Deployment Center
+But before we do this, we need to make sure our Flask web server can talk to our database service, similarly to how we defined the connection string in our terminal. We will need to set it up for our Web App Service from Azure.
+
+Click on + New Application String
+
+Name: dbstring
+
+Value: Your connection string that you defined earlier in this section.
+
+Click Okay and Save.
+
+![Azure Port Page for Web App Services](./todo_images/application_settings.png)
+
+
+
+We're almost there now. 
+
+On the left panel, there are a number of options. Navigate to Deployment > Deployment Center.
 
 ![Azure Port Page for Web App Services](./todo_images/deployment_center.png)
 
