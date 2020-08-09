@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block body %}
+    <div class="container">
+        <form action="/task/{{taskId}}" method="post">
+            <input name="taskId" type="text" class="form-control d-none" id="inputId" value="{{taskId}}">
+            <div class="form-group">
+              <label for="inputName">Task Name</label>
+              <input name="taskName" type="text" class="form-control" id="inputName" value="{{taskName}}">
+            </div>
+            <div class="form-group">
+                <label for="taskDescription">Task Description</label>
+                <textarea name="taskDescription" class="form-control" id="taskDescription" rows="4">{{taskDescription}}</textarea>
+              </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+    </div>
+	{% include "modals.html" %}
+{% endblock %}

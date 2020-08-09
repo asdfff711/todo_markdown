@@ -1,0 +1,37 @@
+{% extends "base.html" %} 
+
+{% block body %}
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Task</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for task in tasks %}
+    <tr>
+      <th scope="row">{{loop.index}}</th>
+      <td>{{task.name}}</td>
+      <td>
+        <a href="/task/{{task.id}}"
+          ><button type="button" class="btn btn-primary">View</button></a
+        >
+        <button
+          type="button"
+          data-item-id="{{task.id}}"
+          data-toggle="modal"
+          data-target="#deleteModal"
+          class="btn btn-danger"
+          onclick="{setDeleteId(this)}"
+        >
+          Delete
+        </button>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% include "modals.html" %} 
+{% endblock %}
